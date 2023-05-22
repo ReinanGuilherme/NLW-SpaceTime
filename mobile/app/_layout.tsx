@@ -33,6 +33,9 @@ export default function Layout() {
     SecureStore.getItemAsync('token').then((token) => {
       setIsUserAuthenticated(!!token)
     })
+    SecureStore.getItemAsync('token').then((token) => {
+      console.log(!!token)
+    })
   }, [])
 
   if (!hasLoadedFonts) {
